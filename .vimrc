@@ -26,17 +26,19 @@ Plugin 'scrooloose/syntastic'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'bling/vim-airline'
 Plugin 'altercation/vim-colors-solarized'
-Plugin 'Shougo/neocomplcache.vim'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'bronson/vim-trailing-whitespace'
-Plugin 'Shougo/vimshell.vim'
 Plugin 'Shougo/vimproc.vim'
 Plugin 'Shougo/vinarise.vim'
 Plugin 'wellsjo/wells-colorscheme.vim'
 Plugin 'vim-scripts/guicolorscheme.vim'
 Plugin 'tpope/vim-surround'
+"Plugin 'Valloric/YouCompleteMe'
 
 call vundle#end()
+
+" Show function prototypes
+set completeopt=menuone,preview
 
 " Syntastic
 let g:syntastic_cpp_compiler = 'clang++'
@@ -64,9 +66,6 @@ let g:airline#extensions#tabline#enabled = 1
 
 " Neocomplcache
 let g:neocomplcache_enable_at_startup = 1
-
-" Vimshell
-let g:vimshell_user_prompt = 'fnamemodify(getcwd(), ":~")'
 
 " guicolorscheme
 " IMPORTANT: Uncomment one of the following lines to force
