@@ -33,7 +33,8 @@ Plugin 'Shougo/vinarise.vim'
 Plugin 'wellsjo/wells-colorscheme.vim'
 Plugin 'vim-scripts/guicolorscheme.vim'
 Plugin 'tpope/vim-surround'
-"Plugin 'Valloric/YouCompleteMe'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'SirVer/ultisnips'
 
 call vundle#end()
 
@@ -66,6 +67,13 @@ let g:airline#extensions#tabline#enabled = 1
 
 " Neocomplcache
 let g:neocomplcache_enable_at_startup = 1
+
+" YouCompleteMe
+let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"
+
+" Ultisnips
+let g:ycm_key_list_select_completion=[]
+let g:ycm_key_list_previous_completion=[]
 
 " guicolorscheme
 " IMPORTANT: Uncomment one of the following lines to force
