@@ -33,7 +33,7 @@ Plugin 'Shougo/vinarise.vim'
 Plugin 'wellsjo/wells-colorscheme.vim'
 Plugin 'vim-scripts/guicolorscheme.vim'
 Plugin 'tpope/vim-surround'
-"Plugin 'Valloric/YouCompleteMe'
+Plugin 'Valloric/YouCompleteMe'
 
 call vundle#end()
 
