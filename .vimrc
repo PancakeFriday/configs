@@ -22,7 +22,6 @@ let mapleader = ","
 Plugin 'gmarik/Vundle.vim'
 
 Plugin 'scrooloose/nerdtree'
-Plugin 'scrooloose/syntastic'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'bling/vim-airline'
 Plugin 'altercation/vim-colors-solarized'
@@ -30,11 +29,20 @@ Plugin 'jiangmiao/auto-pairs'
 Plugin 'bronson/vim-trailing-whitespace'
 Plugin 'Shougo/vimproc.vim'
 Plugin 'Shougo/vinarise.vim'
-Plugin 'wellsjo/wells-colorscheme.vim'
 Plugin 'vim-scripts/guicolorscheme.vim'
 Plugin 'tpope/vim-surround'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'SirVer/ultisnips'
+Plugin 'beyondmarc/glsl.vim'
+Plugin 'tpope/vim-fugitive'
+Plugin 'sjl/gundo.vim'
+Plugin 'szw/vim-ctrlspace'
+Plugin 'vim-scripts/c.vim'
+
+" Themes
+Plugin 'wellsjo/wells-colorscheme.vim'
+Plugin 'demorose/up.vim'
+Plugin 'toupeira/vim-desertink'
 
 call vundle#end()
 
@@ -50,6 +58,9 @@ syntax enable
 set t_Co=256
 set background=dark
 
+" Gundo
+nnoremap <F5> :GundoToggle<CR>
+
 " Jump to the next row on long lines
 map <Down> gj
 map <Up>   gk
@@ -64,6 +75,7 @@ if !exists('g:airline_symbols')
 endif
 let g:airline_symbols.space = "\ua0"
 let g:airline#extensions#tabline#enabled = 1
+let g:airline_exclude_preview = 1
 
 " Neocomplcache
 let g:neocomplcache_enable_at_startup = 1
@@ -86,9 +98,12 @@ if (&t_Co == 256 || &t_Co == 88) && !has('gui_running') &&
   " Use the guicolorscheme plugin to makes 256-color or 88-color
   " terminal use GUI colors rather than cterm colors.
   runtime! plugin/guicolorscheme.vim
-  GuiColorScheme wells-colors
+  GuiColorScheme desertink
 else
   " For 8-color 16-color terminals or for gvim, just use the
   " regular :colorscheme command.
   colorscheme wells-colors
 endif
+
+" Set the c register to hold my default cpp header commentary
+let @c = "//------------------------------\n//-- Copyright Robin Eberhard --\n//-- 2015 ----------------------\n//------------------------------"
