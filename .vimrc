@@ -49,6 +49,9 @@ call vundle#end()
 " Show function prototypes
 set completeopt=menuone,preview
 
+" switch to header/source
+map <F4> :e %:p:s,.h$,.X123X,:s,.cpp$,.h,:s,.X123X$,.cpp,<CR>
+
 " Syntastic
 let g:syntastic_cpp_compiler = 'clang++'
 let g:syntastic_cpp_compiler_options = ' -std=c++11 -stdlib=libc++'
