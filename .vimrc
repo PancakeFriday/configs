@@ -49,6 +49,10 @@ call vundle#end()
 " Show function prototypes
 set completeopt=menuone,preview
 
+" case sensitivity for search
+set ignorecase
+set smartcase
+
 " switch to header/source
 map <F4> :e %:p:s,.h$,.X123X,:s,.cpp$,.h,:s,.X123X$,.cpp,<CR>
 
