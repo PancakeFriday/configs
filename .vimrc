@@ -31,7 +31,7 @@ Plugin 'Shougo/vimproc.vim'
 Plugin 'Shougo/vinarise.vim'
 Plugin 'vim-scripts/guicolorscheme.vim'
 Plugin 'tpope/vim-surround'
-Plugin 'Valloric/YouCompleteMe'
+"Plugin 'Valloric/YouCompleteMe'
 Plugin 'SirVer/ultisnips'
 Plugin 'beyondmarc/glsl.vim'
 Plugin 'tpope/vim-fugitive'
@@ -74,6 +74,9 @@ map <Up>   gk
 nnoremap j gj
 nnoremap k gk
 nmap <Leader>j :echo "test"
+
+" ctrlspace
+let g:ctrlspace_save_workspace_on_exit = 1
 
 " Airline
 let g:airline_powerline_fonts = 1
